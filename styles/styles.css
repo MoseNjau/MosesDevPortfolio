@@ -264,7 +264,6 @@ nav.scrolled { padding: .75rem 5rem; }
   50% { opacity: .7; transform: scale(1.015); }
 }
 
-
 .profile-img {
   width: 100%; height: 100%;
   border-radius: 8px;
@@ -287,29 +286,7 @@ nav.scrolled { padding: .75rem 5rem; }
 }
 .profile-placeholder i { font-size: 2.5rem; color: var(--border-hi); margin-bottom: .5rem; }
 
-/* floating badges */
-.fbadge {
-  position: absolute;
-  background: rgba(11,24,40,.95);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: .5rem .8rem;
-  font-family: var(--mono); font-size: .65rem;
-  color: var(--white); letter-spacing: .04em;
-  display: flex; align-items: center; gap: .35rem;
-  white-space: nowrap;
-  animation: float 6s ease-in-out infinite;
-  backdrop-filter: blur(10px);
-}
-.fbadge i { color: var(--lime); }
-.fb1 { top: 8%; right: -24px; animation-delay: 0s; }
-.fb2 { bottom: 22%; left: -28px; animation-delay: -2.2s; }
-.fb3 { top: 58%; right: -20px; animation-delay: -4s; }
 
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
 
 /* stat bar */
 .stat-bar {
