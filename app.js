@@ -7,6 +7,24 @@ menuToggle.addEventListener('click', () => mobileNav.classList.add('open'));
 menuClose.addEventListener('click', closeMobileMenu);
 function closeMobileMenu() { mobileNav.classList.remove('open'); }
 
+/* ── Resume Dropdown ── */
+const resumeToggle = document.getElementById('resumeToggle');
+const resumeDropdown = document.getElementById('resumeDropdown');
+if (resumeToggle && resumeDropdown) {
+  resumeToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    resumeDropdown.classList.toggle('open');
+    const isOpen = resumeDropdown.classList.contains('open');
+    resumeToggle.setAttribute('aria-expanded', isOpen);
+  });
+  document.addEventListener('click', (e) => {
+    if (!resumeDropdown.contains(e.target) && e.target !== resumeToggle) {
+      resumeDropdown.classList.remove('open');
+      resumeToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
 /* ── Navbar shrink on scroll ── */
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('navbar');
